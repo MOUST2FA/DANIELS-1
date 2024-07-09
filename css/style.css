@@ -1,0 +1,494 @@
+:root {
+    --minColor: #0078ff;
+    --secondaryColor: #4e4e54;
+    --bgColor: #f5f5f5;
+    --bgBlack: #000;
+    --bgWhite: #fff;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dotsText {
+    width: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+.dotsText .dots {
+    width: 100%;
+    height: 10%;
+    top: 70%;
+    position: absolute;
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+}
+
+/* !------------------------------------Navbar-------------------------------! */
+
+.navbar{
+    transition: 1s;
+}
+
+.navbar .nav-item .active {
+    border-bottom: 3px solid var(--bgWhite);
+    color: #fff ;
+}
+
+
+
+.navbar a {
+    margin-left: 20px;
+    font-weight: bold;
+    padding: 0%;
+    color: #d8d5d5 ;
+    position: relative;
+}
+
+.navbar ul li a::before{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: var(--bgWhite);
+    bottom: -2px;
+    left: 0%;
+    position: absolute;
+    z-index: 999;
+    transition: .6s;
+}
+
+.navbar ul li a:hover:before{
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: var(--bgWhite) ;
+}
+
+/* !------------------------------------Home-------------------------------! */
+
+.homeImg {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homeImg h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.homeImg h2 {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.homeImg h2::after {
+    content: "";
+    animation-name: anmTitle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.homeImg h2 span {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.homeImg .icon i {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+@keyframes anmTitle {
+
+    0% {
+        content: "D|";
+    }
+
+    6% {
+        content: "De|";
+    }
+
+    12% {
+        content: "Dev|";
+    }
+
+    18% {
+        content: "Deve|";
+    }
+
+    24% {
+        content: "Devel|";
+    }
+
+    30% {
+        content: "Develo|";
+    }
+
+    36% {
+        content: "Develop|";
+    }
+
+    42% {
+        content: "Develope|";
+    }
+
+    48% {
+        content: "Developer|";
+    }
+
+    54% {
+        content: "D|";
+    }
+
+    60% {
+        content: "De|";
+    }
+
+    66% {
+        content: "Des|";
+    }
+
+    72% {
+        content: "Desi|";
+    }
+
+    78% {
+        content: "Desig|";
+    }
+
+    84% {
+        content: "Design|";
+    }
+
+    90% {
+        content: "Designe|";
+    }
+
+    100% {
+        content: "Designer|";
+    }
+
+}
+
+/* !------------------------------------About-------------------------------! */
+
+.about .imgHero img {
+    width: 95%;
+}
+
+.about .imgHero {
+    position: relative;
+}
+
+.about .imgHero .imgDots {
+    width: 80%;
+    height: 80%;
+    bottom: -5%;
+    left: -5%;
+    position: absolute;
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.progress {
+    --bs-progress-height: 1.5rem;
+    --bs-progress-font-size: 0.75rem;
+    --bs-progress-bg: #e9ecef;
+    --bs-progress-border-radius: 0.375rem;
+    --bs-progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    --bs-progress-bar-color: #fff;
+    --bs-progress-bar-bg: #000;
+    --bs-progress-bar-transition: width 0.6s ease;
+    display: flex;
+    height: var(--bs-progress-height);
+    overflow: hidden;
+    font-size: var(--bs-progress-font-size);
+    background-color: var(--bs-progress-bg);
+    border-radius: var(--bs-progress-border-radius);
+    box-shadow: inset 5px 7px 15px 2px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.about .btn-1 {
+    border: none;
+    border: 1px solid var(--bgBlack);
+    padding: 10px 30px;
+    border-radius: 7px;
+    background-color: var(--bgBlack);
+    color: var(--bgWhite);
+    transition: .5s;
+}
+
+.about .btn-1:hover {
+    background-color: var(--bgWhite);
+    color: var(--bgBlack);
+}
+
+.about .btn-2 {
+    border: none;
+    border: 1px solid var(--bgBlack);
+    padding: 10px 30px;
+    border-radius: 7px;
+    background-color: var(--bgWhite);
+    color: var(--bgBlack);
+    transition: .5s;
+}
+
+.about .btn-2:hover {
+    background-color: var(--bgBlack);
+    color: var(--bgWhite);
+}
+
+/* !------------------------------------SERVICES-------------------------------! */
+
+.services {
+    margin-top: 100px;
+    background-color: var(--bgColor);
+}
+
+.services h2 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+
+.services .icon h3 {
+    margin: 20px 0;
+}
+
+.services .icon .iconHover {
+    width: 70px;
+    height: 70px;
+    background-color: var(--bgColor);
+    border-radius: 50%;
+    margin: auto;
+    transition: .5s;
+}
+
+.services .icon:hover .iconHover {
+    background-color: var(--bgBlack);
+    color: var(--bgWhite);
+}
+
+/* !------------------------------------WORKS-------------------------------! */
+
+.fitContent {
+    width: fit-content;
+}
+
+.works h2{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.works .hoverImg {
+    position: relative;
+}
+
+.works .hoverImg .lear {
+    background-color: var(--bgWhite);
+    width: 96%;
+    height: 96%;
+    top: 2%;
+    left: 2%;
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+
+.works .hoverImg:hover .lear{
+    opacity: 1;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: transparent;
+    border-radius: 0%;
+    border-bottom: 2px solid var(--bgBlack);
+}
+
+/* !------------------------------------CLIeNTS-------------------------------! */
+.clients{
+    margin-top: 100px;
+    background-color: var(--bgColor);
+}
+
+.clients h2{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+
+
+/* !------------------------------------Icons-------------------------------! */
+
+.mood .icon{
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mood .icon i{
+    font-size: 30px;
+    color: var(--bgBlack);
+}
+
+
+/* !------------------------------------TEAM-------------------------------! */
+
+.team{
+    background-color: var(--bgColor);
+}
+
+.team h2{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.team .parent {
+    position: relative;
+}
+
+.team .parent .lear{
+width: 96%;
+height: 96%;
+background-color: var(--bgWhite);
+position: absolute;
+top: 2%;
+bottom: 2%;
+left: 2%;
+right: 2%;
+opacity: 0;
+}
+
+.team .card{
+    overflow: hidden;
+}
+
+.team .card img{
+    transition: 1s;
+}
+
+.team .card:hover img{
+    transform: scale(1.2);
+}
+
+.team .card .lear{
+    transition: 1s;
+    transform: rotateY(180deg);
+}
+
+.team .card:hover .lear{
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.team .card .card-body{
+    z-index: 9;
+}
+
+.team .child{
+    width: 50px;
+    height: 50px;
+    background-color: var(--bgBlack);
+    color: var(--bgWhite);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.team .child:hover{
+    border: 1px solid var(--bgBlack);
+    background-color: var(--bgWhite);
+    color: var(--bgBlack);
+  
+}
+
+/* !------------------------------------CONTACT-------------------------------! */
+
+.contact h2{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.contact input{
+    border: none;
+    background-color: var(--bgColor);
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.contact input:focus{
+    border:1px solid #7d7a7a;
+}
+
+.contact textarea{
+    resize: none;
+    height: 120px;
+    border: none;
+    background-color: var(--bgColor);
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.contact textarea:focus{
+    border:1px solid #7d7a7a;
+}
+
+.contact .container_1{
+    width: 70%;
+    margin: auto;
+}
+
+/* !------------------------------------FOOTER-------------------------------! */
+
+.footer{
+    background-color: #4e4e54;
+}
